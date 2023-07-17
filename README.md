@@ -2,7 +2,7 @@
 
 > A blog about my projects
 
-![Access to the blog](https://zuygui.github.io/blog)
+[Link to the blog](https://zuygui.github.io/blog)
 
 ## Description
 
