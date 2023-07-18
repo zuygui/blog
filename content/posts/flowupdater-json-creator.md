@@ -13,13 +13,39 @@ hideComments = false
 color = "" #color from the theme settings
 +++
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Flow Updater](#flow-updater)
+- [Tech Stack](#tech-stack)
+- [The goal](#the-goal)
+- [Development Steps](#development-steps)
+- [What's Next?](#whats-next)
+- [Credits](#credits)
+- [Conclusion](#conclusion)
+
 # Introduction
 
 While discussing and assisting people on the [Support Launcher](https://discord.gg/zJkc7nZHRk) Discord server, a discord server for helping people to make customs Minecraft launchers, I realized that creating JSON files compatible with [Flow Updater](https://github.com/FlowArg/FlowUpdater) was time-consuming and tedious. This led me to the idea of developing a command-line tool to replace [the existing desktop application](https://github.com/FlowArg/FlowUpdaterJsonCreator).
 
-# Why JSON?
+# Flow Updater
 
-JSON (JavaSript Object Notation) is a simple file format for write and store data. It is used in many applications, including Minecraft. It is a human-readable format, which means that it is easy to read and write. It is also a lightweight format, which means that it does not take up much space on the disk. Finally, it is a flexible format, which means that it can be used for many purposes.
+Flow updater is a Java library to install, update and launch Minecraft (retrieved from officials servers) and mods loaded through Forge or any other mods loader. To load the mod list and other configurations, it is possible to host a JSON file and pass it into the library, ... So a JSON compatible with FlowUpdater looks like :
+
+_Note:_ JSON (JavaScript Object Notation) is a data file format easy to read and write for humans and machines.
+
+```json
+{
+  "curseFiles": [
+    {
+      "projectID": 123456, // random curseforge project id
+      "fileID": 123456 // random curseforge file id
+    }
+  ]
+}
+```
+
+Writing this JSON is very tedious and time-consuming because you have to find the project id and the file id for each mod. So I decided to write a CLI tool to make this task easier.
 
 # Tech Stack
 
