@@ -1,10 +1,10 @@
 +++
-title = "How I created Flowupdater Json Creator"
+title = "Coding jurney: rewriting Flowupdater Json Creator in Rust"
 date = "2023-07-18T00:32:40+02:00"
 author = "Zuygui"
 authorTwitter = "" #do not include @
 cover = ""
-tags = ["java", "minecraft", "flowupdater", "cli"]
+tags = ["rust", "minecraft", "flowupdater", "cli"]
 keywords = ["flowudpater", "minecraft", "cli"]
 description = "How I wrote a CLI tool to make JSON writing for flowupdater faster."
 showFullContent = false
@@ -15,7 +15,11 @@ color = "" #color from the theme settings
 
 # Introduction
 
-While discussing and assisting people on the [Support Launcher](https://discord.gg/zJkc7nZHRk) Discord server, I realized that creating JSON files compatible with [Flow Updater](https://github.com/FlowArg/FlowUpdater) was time-consuming and tedious. This led me to the idea of developing a command-line tool to replace the existing desktop application.
+While discussing and assisting people on the [Support Launcher](https://discord.gg/zJkc7nZHRk) Discord server, a discord server for helping people to make customs Minecraft launchers, I realized that creating JSON files compatible with [Flow Updater](https://github.com/FlowArg/FlowUpdater) was time-consuming and tedious. This led me to the idea of developing a command-line tool to replace [the existing desktop application](https://github.com/FlowArg/FlowUpdaterJsonCreator).
+
+# Why JSON?
+
+JSON (JavaSript Object Notation) is a simple file format for write and store data. It is used in many applications, including Minecraft. It is a human-readable format, which means that it is easy to read and write. It is also a lightweight format, which means that it does not take up much space on the disk. Finally, it is a flexible format, which means that it can be used for many purposes.
 
 # Tech Stack
 
@@ -27,6 +31,10 @@ To build this software, I had to utilize several tools, including:
 - [Serde JSON](https://github.com/serde-rs/json), an extension of the `serde` crate that enables the serialization and deserialization of Rust structs.
 
 I've only mentioned the most significant elements present in the [source code](https://github.com/zuygui/flowupdater-json-creator).
+
+# The goal
+
+I wanna replace the Java application (GUI) by a CLI application in Rust. I also wanna make the application more fast and accessible. Finally, I wanna add new features to the application like locals mods support and archives exports.
 
 # Development Steps
 
@@ -44,6 +52,10 @@ This code snippet captures the input to the program: the `main` function defines
 
 Due to my heavy workload with my integration into the development team of the [WEB Aide Jeune](https://aidejeune.fr) association, I have less time to continue making progress on the project. This does not mean that I'm abandoning it; I'm simply moving forward at a slower pace. I sincerely thank [Bricklou](https://github.com/Bricklou) for helping me maintain the project. We are actively working on creating new features.
 
+# Credits
+
+I wanna thank [Bricklou](https://github.com/bricklou) for maintening the project with me. I also wanna thank [FlowArg](https://github.com/FlowArg) for creating the original project. Finally, I wanna thank [Asthowen](https://github.com/Asthowen) for helping me with Github CI.
+
 # Conclusion
 
-Thank you for reading this article on my blog. I hope you enjoyed it. Please feel free to leave a comment and give the GitHub repository of this blog a star :star:.
+Thank you for reading this article on my blog. I hope you enjoyed it. Please feel free to leave a comment and give the GitHub repository of this blog a star ⭐.
