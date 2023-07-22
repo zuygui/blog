@@ -21,6 +21,8 @@ color = "" #color from the theme settings
 - [The goal](#the-goal)
 - [Development Steps](#development-steps)
 - [What's Next?](#whats-next)
+- [The refactoring](#the-refactoring)
+- [The GUI](#the-gui)
 - [Credits](#credits)
 - [Conclusion](#conclusion)
 
@@ -77,6 +79,25 @@ This code snippet captures the input to the program: the `main` function defines
 # What's Next?
 
 Due to my heavy workload with my integration into the development team of the [WEB Aide Jeune](https://aidejeune.fr) association, I have less time to continue making progress on the project. This does not mean that I'm abandoning it; I'm simply moving forward at a slower pace. I sincerely thank [Bricklou](https://github.com/Bricklou) for helping me maintain the project. We are actively working on creating new features.
+
+# The refactoring
+
+With [Bricklou](https://github.com/bricklou), we have decided to refactor all the code of the app for a better readability and a better maintainability. The first version of code are always available at the [old](https://github.com/zuygui/flowupdater/tree/old) branch. The new version of the code is available at the [master](https://github.com/zuygui/flowupdater) branch. I've migrated all the backend code to the backend in a rust crate called [fujc_api](https://crates.io/crates/fujc_api) for a better integration to the (future) GUI app and CLI. Why have two backend when we can have one ?
+For install the crate, you can use the following command :
+
+```sh
+cargo add fujc_api
+```
+
+or add the following line to your `Cargo.toml` file :
+
+```toml
+fujc_api = "0.1.0"
+```
+
+# The GUI
+
+Bricklou suggested to implement a GUI app for a better accessibility. It's not already implemented but we are working on. We are using [Qt](https://www.qt.io/) for the GUI app, Qt XML, and the Qt binding for Rust. The source code isn't available yet but it will be available soon.
 
 # Credits
 
